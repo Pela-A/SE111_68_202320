@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--Name: Alexander Pela
+        Section ID: 202320_SE111.02
+        Date:1/24/2023
+    
+    
+    -->
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Pela">
+    <meta name="description" content="W3 Bio Page">
+    <title>W3 | Bio</title>
+
+    <style>
+        /*write CSS in here*/
+
+        /*select elements by TYPE - applies to all tags of that type*/
+        div {
+            border: 2px solid black;
+            padding:10px;
+            margin:5px;
+        }
+
+        /*select elements by #ID - applies ONLY to element with that ID*/
+        #wrapper {
+            background-color:grey;
+            width:900px;
+            margin:auto; /*centers element in page; auto equal left + right space*/
+        }
+
+        /*select elements by .CLASS - applies only to elements with that CLASS*/
+        .bg {
+            border:2px solid rgb(0, 77, 128);
+        }
+
+        #nav {
+            border:2px solid black;
+        }
+
+
+    </style>
+    
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+        <div id="header" class="bg">
+
+            <h1>Alexander Pela - About Me</h1>
+
+        </div> <!--End of Header-->
+
+        <div id="nav">
+
+
+            <a href="index.html">HOME</a> | <a href="school.html">SCHOOL</a> | <a href="hobbies.html">HOBBIES</a>
+            
+
+            <hr>
+        </div> <!--End of Nav Div-->
+
+        <div id="main-content">
+
+            <h2 id="schooling">My Schooling</h2>
+            <ol>
+                <li>North Smithfield Highschool <i>(2015-2019)</i></li>
+                <li>Community College of Rhode Island <i>(2019-2021)</i></li>
+                <li>New England Institute of Technology <i>(2022-Present)</i></li>
+            </ol>   
+            <br>
+            <img src="images/CCRI.png" alt="Chalked">
+            <hr>
+        </div> <!--End of Main Content-->
+
+        <div id="footer" class="bg">
+            <a href=#header>Return to Top</a>
+            <br>
+            <img src="images/W2Validation.png" alt="Chalked">
+
+        </div> <!--End of Footer-->
+    </div> <!--End of Wrapper-->
