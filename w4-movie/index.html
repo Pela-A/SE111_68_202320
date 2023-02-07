@@ -37,18 +37,23 @@
             border:2px solid black;
         }
 
-
+        /*was trying to have image center in page but supposedly margin:auto just centers the block element and not the inline elements
+        text allign is how you would center inline elements?.*/
+        .center {
+            margin:auto;
+            text-align: center;
+        }
     </style>
 
 </head>
 <!--    <em>Movie<em>   -->
 <body>
-    <div id="container"  class>
+    <div id="container">
 
-        <hr>
+        <hr class="bg">
 
         <div id="header" class="bg">
-            <h1><em>Movie</em></h1>
+            <h1 class="center"><em>Cars (2006)</em></h1>
         </div>
 
         <div id="nav">
@@ -56,7 +61,7 @@
             <a href="index.html">HOME</a> | <a href="cast.html">CAST</a> | <a href="review.html">REVIEW</a>
         </div> <!--End of Nav Div-->
 
-        <hr>
+        <hr class="bg">
 
         
 
@@ -64,41 +69,32 @@
             <h2 id="home">HOME</h2>
             
             <div id="page-content">
-                <p>summary/intro to movie.</p>
+                <p>In a hypothetical world where all people are cars, Lightning McQueen is a rookie racer trying to win his first piston cup. While Mack, the truck responsible for bringing Lightning
+                    to his races is driving in the night he doozes off due to some hooligans leaving McQueen stranded in a small unknown town called Radiator Springs.
+                    It is up to McQueen to make it out of Radiator Springs and evolve as a racer in order to win the Piston Cup.</p>
 
-                <img src="images/IMG_5976.jpg" alt="Chalked">
+                <img src="images/CarsPoster.jfif" alt="Chalked">
                 
                 <div class="info">
 
                     <p>
                     
-                    <b>Company Credits:</b>text<br>
-                    <b>Release Date:</b>text<br>
-                    <b>Genres:</b>text<br>
-                    <b>Rating:</b>text<br>
-                    <b>Running time:</b>text<br>
+                    <b>Company Credits: </b>Pixar Animation Studios | Walt Disney<br>
+                    <b>Release Date: </b>May 26 2006<br>
+                    <b>Genres: </b>Animation | Adventure | Comedy<br>
+                    <b>Rating: </b>7.2/10 on IMDb (This is a criminal rating)<br>
+                    <b>Running time: </b>1H 57M<br>
                  
                     </p>
                     
                 </div>
-                <p>Company Credits:<br>Release Date:<br>Genres<br>Rating:<br>Running time</p>
-                <p></p>
+            
             </div> <!--End of page content-->
-            
-        
-            
-
-            <img src="images/IMG_5976.jpg" alt="Chalked">
-
-            <div class="info">
-                <p>Company Credits:<br>Release Date:<br>Genres<br>Rating:<br>Running time</p>
-                <p></p>
-            </div> <!--End of info-->
             
         </div> <!--End of Content-->
 
         <br>
-        <hr>
+        <hr class="bg">
 
         <div id="footer" class="bg">
             <a href=#header>Return to Top</a>
