@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Pela">
+    <meta name="description" content="W6 Pay Calculator ">
+    
+    <title>W6 Pay Calculator
+
+    </title>
+</head>
+<body>
+
+    <!--Start of JavaScript-->
+    <script>
+
+        //Declaring all variables
+
+        var hourlyPay = 0
+        var hoursWeek = 0
+        var hoursTwo = 0
+        var taxPercent = .2
+        var grossPay = 0
+        var samShare = 0
+        var netPay = 0
+
+        //Prompts
+        hourlyPay = Number(prompt("What is your hourly pay? "))
+        hoursWeek = Number(prompt("How many hours a week do you work? "))
+        
+        //Calculations
+        hoursTwo = hoursWeek*2
+        grossPay = hoursTwo*hourlyPay
+        samShare = taxPercent*grossPay
+        netPay = grossPay-samShare
+
+        //Alert
+        alert(`Gross Pay: $${grossPay.toFixed(2)}\nUncle Sam's Share: $${samShare.toFixed(2)}\nNet Pay: $${netPay.toFixed(2)}`)
+
+        //Three separate console.log functions
+        console.log(`Gross Pay: $${grossPay.toFixed(2)}`)
+        console.log(`Uncle Sam's Share: $${samShare.toFixed(2)}`)
+        console.log(`Net Pay: $${netPay.toFixed(2)}`)
+    </script>
+    <!--End of JavaScript-->
+</body>
+</html>
