@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jay Aguiar">
+    <meta name="description" content="Week 8 Objects and Arrays Assignment">
+    <title>Week 8 | Assignment</title>
+</head>
+<body>
+<script>
+    /*-------PART 1----------
+    Create three variables first1, last1, age1
+    Create another three variables first2, last2, age2
+    Give them all values
+    
+    console.log(`------Part 1-------`)
+    console.log(`First Person`)
+    console.log(first1,last1,age1)
+    console.log(`Second Person`)
+    console.log(first2,last2,age2)
+    --------------------------*/
+
+    /*-------PART 2----------
+    Create a <div id="output"> in the HTML
+    Create a variable called output
+    Store the <div id="output"> in the output variable using: document.querySelector(`#output`)
+    !This will be used to display the variables
+    --------------------------*/
+
+    /*-------PART 3----------
+    Create a variable called message
+    Make message = `<p>${first1}</p><p>${last1}</p><p>${age1}</p>`
+    Make output.innerHTML = message
+    !You will see the variables show up on the page
+    --------------------------*/
+
+    /*-------PART 4----------
+    Create a variable called person1
+    Set person1 = {}
+    !This creates an object
+    add the following properties to the object: first, last, age
+    EXAMPLE: person1 = {first:`Jay`, last:`Aguiar`, age:`41`}
+    console.log(`------Part 4-------`)
+    console.log(`Person 1`)
+    console.log(typeof person1)
+    console.log(person1)
+    --------------------------*/
+
+     /*-------PART 5----------
+    Create a variable called person2
+    Set person2 = {}
+    !This creates an object
+    add the following properties to the object: first, last, age
+    EXAMPLE: person2 = {first:`Katie`, last:`Truchon`, age:`?`}
+   
+    console.log(`------Part 5-------`) 
+    console.log(`Person 2`)
+    console.log(person2)
+    --------------------------*/
+
+    /*-------PART 6----------
+    Make message = `<h2>Person 1</h2><p>${person1.first}</p><p>${person1.last1}</p><p>${person1.age1}</p>`
+    Make output.innerHTML = message
+    !You will see the variables show up on the page
+    --------------------------*/
+
+    /*-------PART 7----------
+    NOTICE the + on the following line. It will append message rather than assign a new value.
+    Make message += `<h2>Person 2</h2><p>${person2.first}</p><p>${person2.last1}</p><p>${person2.age1}</p>`
+    Make output.innerHTML = message
+    !You will see both people's info show up on the page
+    --------------------------*/
+
+    /*-------PART 8----------
+    Create a Class using the following code:
+    NOTE that the class name uses an Uppercase `P`
+    class Person {
+        constructor()
+        {
+            this.first = f
+            this.last = l
+            this.age = a
+        }
+    }
+    --------------------------*/
+
+     /*-------PART 9----------
+    Make person3 = new Person()
+    Make person3.first = `Rocky`
+    Make person3.last = `Balboa`
+    Make person3.age = `34`
+    console.log(`------Part 9-------`)
+    console.log(`Person 3`)
+    console.log(person3)
+    --------------------------*/
+
+
+    /*-------PART 10----------
+    Add an f, l and a to the Person classes constructor parameters with default values
+    Make this.first = f
+    Make this.last = l
+    Make this.age = a
+    class Person {
+        constructor(f=`John`,l=`Doe`,a=0)
+        {
+            this.first = f
+            this.last = l
+            this.age = a
+        }
+    }
+    --------------------------*/
+
+     /*-------PART 11----------
+  make a new variable called person4 and create a new Person
+  var person4 = new Person()
+  console.log(`------Part 11-------`)
+   console.log(`Person 4`)
+  console.log(person4)
+    --------------------------*/
+     /*-------PART 12----------
+  make a new variable called person5 and create a new Person with arguments for each parameter
+  var person5 = new Person(`Bozo`,`The Clown`, 25)
+  console.log(`------Part 12-------`)
+  console.log(`Person 5`)
+  console.log(person5)
+    --------------------------*/
+
+    /*-------PART 13----------
+    Create methods for the Person class to log and write the info
+    class Person {
+        constructor(f,l,a)
+        {
+            this.first = f
+            this.last = l
+            this.age = a
+        }
+        logObject()
+        {
+            console.log(this)
+        }
+        logInfo(){
+           console.log(this.first, this.last, this.age)
+        }
+        writeInfo(id){
+            message = `Name:${this.first} ${this.last} <br> Age:${this.age}`
+            document.querySelector(id).innerHTML = message
+        }
+    }
+    --------------------------*/
+
+    /*-------PART 14----------
+    console.log(`------Part 14-------`)
+    console.log(`Person 5`)
+    call person5.logObject()
+    call person5.logInfo()
+    call person5.writeInfo(`#output`)
+    --------------------------*/
+
+    /*-------PART 15----------
+    Try this:
+
+    console.log(`------Part 15-------`)
+    console.log(`Person 1's Keys and Values`)
+    for(index in person1)
+    {
+        console.log(index)
+        console.log(person5[index])
+        console.log(`------------`)
+    }
+
+    !The log should spit out each property name and value of person5
+    --------------------------*/
+
+    /*-------PART 16----------
+    Give your original person1 another property and rerun the program. The for loop should spit out the last property added.
+
+    person1 = {first:`Jay`, last:`aguiar`, age:41, hair:`brown`}
+    --------------------------*/
+
+    /*-------PART 17----------
+    Objects can have other objects as their properties. 
+    Make a person7 with the following properties
+    Example:
+
+    person7 = {
+                first:`Jay`, 
+                last:`aguiar`, 
+                age:41, 
+                hair:`brown`,
+                face:{beard:true, mustache:true}
+                }
+
+    console.log(`------Part 17-------`)
+    console.log(`Person 7`)
+    console.log(person7)
+    console.log(person7.first)
+    console.log(person7.face.beard)
+    --------------------------*/
+
+    /*-------PART 18----------
+    You can change properties of an object
+    person7.name = `Jason`
+    person7.face.beard = false;
+
+    console.log(`------Part 18-------`)
+    consoel.log(`Person 7 after change`)
+    console.log(person7)
+    console.log(`Name: ${person7.first}  ${person7.last}`)
+    console.log(`Beard: $person7.face.beard`)
+    --------------------------*/
+
+    /*-------PART 19----------
+    You can pass objects to functions
+    
+    function hello(object)
+    {
+        console.log(`------Part 18-------`)
+        console.log(`Hello Person 7, ${object.first} ${object.last}`)
+    }
+
+    hello(person7)
+    --------------------------*/
+
+    /*-------PART 19----------
+    You can return multiple values by using objects
+    
+    function getCoords()
+    {
+        return {x:100, y:200}
+    }
+
+    console.log(`------Part 19-------`)
+    console.log(getCoords())
+    console.log(getCoords().x)
+    console.log(getCoords().y)
+    console.log(`x: ${getCoords().x}`)
+    console.log(`y: ${getCoords().y}`)
+    --------------------------*/
+
+    
+</script>   
+</body>
+</html>
