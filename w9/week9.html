@@ -1,11 +1,16 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Week 2 Files</title>
-<style type="text/css">
-	.border{border:1px solid black;}
-</style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Alexander Pela">
+    <meta name="description" content="Week 9 Assignment">
+	<title>Week 2 Files</title>
+	<style type="text/css">
+		.border{border:1px solid black;}
+	</style>
 </head>
 
 <body>
@@ -23,6 +28,34 @@
 		{first:"Marion", last:"Cobretti", credit:"Cobra" }
 	]
 	
+	var body = document.querySelector(`body`)
+
+	for (let i = 0; i < people.length; i++)
+            {
+                var tempDiv = document.createElement(`div`)
+                tempDiv.setAttribute(`id`, i)
+                tempDiv.setAttribute(`class`,`border`)
+
+                for (key in people[i])
+                {
+                    var p1 = document.createElement(`h3`)
+                    var text1 =  document.createTextNode(key.toUpperCase())
+					
+                    p1.appendChild(text1)
+                    tempDiv.appendChild(p1)
+                    
+                    console.log(name)
+                    var p = document.createElement(`p`)
+
+                    var text = document.createTextNode(people[i][key])
+
+                    p.appendChild(text)
+                    tempDiv.appendChild(p)
+
+                }
+
+                body.appendChild(tempDiv)
+            }
 </script>
 
 </html>
