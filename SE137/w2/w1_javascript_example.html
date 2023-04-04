@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide{
+            display:none;
+        }
+        /*
+        comment
+        */
+        h2{
+            font-size:12px;
+        }
+        body{
+            background-color:rgba(143, 12, 143, .5);
+        }
+    </style>
+</head>
+<body>
+   <h1>Header</h1>
+   <div id="nav">
+    <a href="#">bio</a> 
+    <a href="#">eduation</a> 
+    <a href="#">hobbies</a> 
+   </div>
+   <div id="main">
+        <div id="bio" class="content">
+            <h2>Bio</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nam facilis quibusdam. Alias voluptatibus enim neque vero aspernatur corrupti, quisquam necessitatibus inventore id, iure repudiandae a iste suscipit aperiam unde.</p>
+        </div>
+        <div id="ed" class="content">
+            <h2>Education</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur, quia molestiae eaque sint incidunt ab consectetur. Reprehenderit facere odio aliquam architecto rem. Modi assumenda corporis necessitatibus repellendus, eos eius.</p>
+        </div>
+        <div id="hobbies" class="content">
+            <h2>Hobbies</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur, quia molestiae eaque sint incidunt ab consectetur. Reprehenderit facere odio aliquam architecto rem. Modi assumenda corporis necessitatibus repellendus, eos eius.</p>
+        </div>
+   </div>
+    <script>
+        var a = document.querySelectorAll(`#nav a`);
+        console.log(a)
+        
+        for(let i=0; i<a.length; i++)
+        {
+            a[i].addEventListener(`click`, function(e){
+                e.preventDefault();
+
+                var div = document.querySelectorAll(`.content`);
+
+                for(let i=0; i<div.length; i++)
+                {
+                    div[i].classList.add(`hide`);
+                }
+
+               div[i].classList.remove(`hide`);
+                
+            })
+        }
+
+      
+    </script>
+</body>
+</html>
