@@ -1,0 +1,61 @@
+@charset "UTF-8";
+div #ed,#main,#hobbies,#bio,#nav{
+    border-bottom: 2px solid rgb(51, 140, 199);
+    padding-bottom: 6px;
+}
+@font-face {
+    font-family: myFirstFont;
+    src:url(Roboto_Mono/static/RobotoMono-Bold.ttf)
+}
+h1{
+    color:rgb(51, 140, 199);
+    font-family: myFirstFont;
+    border-bottom: 2px solid rgb(51, 140, 199);
+    padding-bottom: 6px;
+    text-align: center;
+
+}
+li {
+    padding-bottom: 4px;
+}
+h2{
+    color:rgb(51, 140, 199);
+    font-family:myFirstFont;
+    text-align: center;
+}
+.content,p{
+    font-family: 'Courier New', Courier, monospace;
+    color:aliceblue
+}
+body{
+    background: rgb(18,18,18);
+    background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(56,56,56,1) 35%);
+}
+.hide{
+    display: none;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border-image: 3px rgb(51, 140, 199);
+    scale: 90%;
+    
+}
+a:link {
+    color:rgb(92, 168, 255);
+}
+a:visited {
+    color:rgb(0, 98, 122);
+}
+a:hover {
+    color: rgb(0, 81, 255);
+    background-color: black;
+    padding: 2px;
+    border: 2px solid rgb(51, 140, 199);
+}
+a:active {
+    color:aliceblue;
+}

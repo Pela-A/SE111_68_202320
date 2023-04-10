@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        color:blue;
+    }
+    h2{
+        color:green;
+    }
+    body{
+        background-color: blanchedalmond;
+    }
+    .hide{
+        display: none;
+    }
+
+</style>
+<body>
+    <h1>Alexander Pela</h1>
+    <hr>
+
+    <div id="nav">
+        <a href="#">Bio</a>
+        <a href="#">Education</a>
+        <a href="#">Hobbies</a>
+    </div>
+    <hr>
+
+    <div id="main">
+        <hr>
+
+        <div id="bio" class="content">
+            <H2>My Bio</H2>
+
+            <img src="images/IMG_5976.jpg" alt="Chalked">
+
+            <p>Hello my name is <strong>Alexander Pela</strong>! I was born on June 5th 2001. That means I am 21 years old and a Gemini! I grew up in <em>North Smithfield</em> and at present I still live in North Smithfield. My family consists of 4 brothers a mom and a dad.
+        
+            </p>
+
+            <p> I like to describe myself as a smart idiot. I am simulataneously able to impress myself and others around me by my ability to adapt and learn fast but also I have the ability to do some really stupid stuff. Like blatant dumb stuff not like half dumb or respectable in any manner.
+                My goal for the future is to reach a point where I can be sustainable on my own as I will be moving out of my parents house soon and while I have time to finish college before I become broke I don't have a ton of time beyond that. Now I am basically in a race against money and time. 
+
+            </p>
+
+            <hr>
+            
+        </div>
+
+        <div id="ed" class="hide content">
+            <H2>Schooling</H2>
+
+            <ul>
+
+                <li>North Smithfield Highschool</li>
+                <li><a href="https://www.ccri.edu/">Community College of Rhode Island</a></li>
+                <li><b>New England Institute of Technology</b></li>
+            
+            </ul>
+
+            <hr>
+        </div>
+        <div id="hobbies" class="hide content">
+            <h2>Hobbies</h2>
+            <ol>
+                <li>Gym</li>
+                <li><i>Video Games</i></li>
+                <li>Ping Pong</li>
+            </ol>
+            <img src="images/Hobbie.png" alt="Chalked">
+            <hr>
+
+        </div>
+
+        <div id="footer">
+            <p>©2020 Alexander Pela | W1 Assignment</p>
+        </div>
+    </div>
+
+    <script>
+
+        var a = document.querySelectorAll(`#nav a`);
+        console.log(a)
+
+        for(let i=0; i<a.length; i++)
+        {
+            console.log(i)
+            a[i].addEventListener(`click`, function(e){
+                e.preventDefault();
+                console.log(i +"test")
+                console.log(a[i])
+                var div = document.querySelectorAll(`.content`);
+                console.log(div)
+                for(let i=0; i<div.length; i++)
+                {
+                    div[i].classList.add(`hide`);
+                }
+
+               div[i].classList.toggle(`hide`);
+                
+            })
+        }
+
+    </script>
+</body>
+</html>
