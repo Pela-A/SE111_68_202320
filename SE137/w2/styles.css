@@ -1,7 +1,13 @@
 @charset "UTF-8";
-div #ed,#main,#hobbies,#bio,#nav{
+div #ed,#main,#hobbies,#bio{
     border-bottom: 2px solid rgb(51, 140, 199);
     padding-bottom: 6px;
+}
+div#nav {
+    border-bottom: 2px solid rgb(51, 140, 199);
+    background-color: rgb(34, 34, 34);
+    text-align: center;
+    
 }
 @font-face {
     font-family: myFirstFont;
@@ -10,9 +16,13 @@ div #ed,#main,#hobbies,#bio,#nav{
 h1{
     color:rgb(51, 140, 199);
     font-family: myFirstFont;
+    border-top: 2px solid black;
     border-bottom: 2px solid rgb(51, 140, 199);
-    padding-bottom: 6px;
+    padding: 6px;
     text-align: center;
+    background-color: rgb(34, 34, 34);
+    margin-block-end: 0px;
+    margin-block-start: 0px;
 
 }
 li {
@@ -22,6 +32,11 @@ h2{
     color:rgb(51, 140, 199);
     font-family:myFirstFont;
     text-align: center;
+    background-color: rgb(34, 34, 34);
+    padding: 30px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    border-bottom: 2px solid black;
 }
 .content,p{
     font-family: 'Courier New', Courier, monospace;
@@ -35,27 +50,32 @@ body{
     display: none;
 }
 
-.image{
+img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: auto;
-    border-image: 3px rgb(51, 140, 199);
+    border-image:round;
     scale: 90%;
     
 }
 a:link {
     color:rgb(92, 168, 255);
+    display:inline-block;
+    padding: 4px;
 }
 a:visited {
     color:rgb(0, 98, 122);
+    display:inline-block;
 }
 a:hover {
     color: rgb(0, 81, 255);
     background-color: black;
     padding: 2px;
     border: 2px solid rgb(51, 140, 199);
+    display:inline-block;
 }
 a:active {
     color:aliceblue;
+    display:inline-block;
 }
