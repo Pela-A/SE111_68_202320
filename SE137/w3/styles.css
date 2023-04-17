@@ -1,0 +1,98 @@
+@charset "UTF-8";
+div #ed,#main,#hobbies,#bio{
+    border-bottom: 2px solid rgb(51, 140, 199);
+    padding-bottom: 6px;
+}
+div#nav {
+    border-bottom: 2px solid rgb(51, 140, 199);
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+    
+}
+div#footer{
+    padding: 4px;
+}
+@font-face {
+    font-family: myFirstFont;
+    src:url(Roboto_Mono/static/RobotoMono-Bold.ttf)
+}
+
+h1{
+    color:rgb(51, 140, 199);
+    font-family: myFirstFont;
+    border-top: 2px solid black;
+    border-bottom: 2px solid rgb(51, 140, 199);
+    border-top:2px solid rgb(27,27,27);
+    padding: 6px;
+    text-align: center;
+    background-color: rgb(23, 23, 23);
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    border-radius: 2px;
+
+
+}
+
+h2{
+    color:rgb(51, 140, 199);
+    font-family:myFirstFont;
+    text-align: center;
+    background-color: rgb(23, 23, 23);
+    padding: 30px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    border-bottom: 2px solid rgb(27, 27, 27);
+    box-shadow: 4px 4px rgb(0,0,0,0.5);
+}
+li{
+    padding: 4px;
+    color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color:aliceblue;
+    background-color: rgb(23, 23, 23);
+    padding: 10px;
+    border: 2px solid rgb(27, 27, 27);
+    
+    box-shadow: 4px 4px rgb(0,0,0,0.5);
+
+}
+body{
+    background: rgb(6,29,34);
+    background: linear-gradient(180deg, rgba(6,29,34,1) 0%, rgba(0,0,0,1) 100%);
+}
+.hide{
+    display: none;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border-image:round;
+    scale: 90%;
+    
+}
+a:link {
+    color:rgb(75, 182, 253);
+    display:inline-block;
+    padding: 12px;
+}
+a:visited {
+    color:rgb(255, 255, 255);
+    display:inline-block;
+}
+a:hover {
+    color: rgb(0, 81, 255);
+    background-color: rgb(20, 20, 20);
+    padding: 2px;
+    border: 2px solid rgb(51, 140, 199);
+    display:inline-block;
+}
+a:active {
+    color:aliceblue;
+    display:inline-block;
+}
