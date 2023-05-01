@@ -22,7 +22,6 @@ h1{
     font-style: normal;
     font-weight: 400;
     font-size: 48px;
-    line-height: 50px;
     color: #BB0908;
 
     padding-bottom:15px;
@@ -37,7 +36,6 @@ h2{
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    line-height: 72px;
 
     padding-top: 7px;
     padding-left: 23px;
@@ -57,30 +55,29 @@ strong{
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 21px;
 
     color: #FC0303;
 }
 
 b{
+    height: 82px;
+    display:block;
     font-family: 'Teko';
     font-size: 72px;
     font-weight: 700;
-    line-height: 103px;
+    border-bottom: 4px solid #FFFFFF;
 
     color:rgba(255, 255, 255, 1)
     
 }
+
+
 #header{
     height:100px;
 
     display:flex;
     justify-content: space-between;
-    
-    
-
-    
-    
+      
 }
 #header #imgP{
 
@@ -115,12 +112,12 @@ b{
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 27px;
 
     color: rgba(255, 255, 255, 1);
     margin-left: 20px;
     margin-bottom:24px;
 }
+
 
 #flex1{
     padding-left: 19px;
@@ -129,43 +126,55 @@ b{
 }
 #flex2{
     display:flex;
-    padding-left: 19px;
+}
+#flex2 div{
+    padding-right: 23px;
+}
+#f2text{
+    display:flex;
+    flex-direction: column;
+    height:157px;
+}
+#f2text p:last-child{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    padding-top: 22px;
 }
 
-
-
-
 #penant{
+    display:flex;
+    flex-direction: column;
     border-top: 5px solid rgba(187, 9, 8, 1); 
-
 
     width: 700px;
     min-height: 481px;
-
-    font-size: 0px;
-
+    
     padding-left: 24px;
     padding-top: 17px;
-
-
+    margin-bottom:25px; 
     
-
 }
-
+#penant div#thing{
+    height:229px
+}
 #penant p{
+
     height: 195px;
-    margin-block-start: 0px;
+    
+    margin-top:19px;
     margin-block-end: 0px;
 
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 36px;
 
     color: #FFFFFF;
 }
+
 #purch{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -178,9 +187,11 @@ b{
 
 
 
+
+
 #dates{
-
-
+    display: flex;
+    flex-direction: column;
     width: 360px;
     min-height: 918px;
 
@@ -188,14 +199,19 @@ b{
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 21px;
     color: rgba(255, 255, 255, 1)
 }
 
 #datecontent{
+    height: 416px;
     padding-top: 31px;
     padding-left: 44px;
     padding-right: 41px;
+
+}
+#dcontentspc{
+    margin-block-end: 18px;
+    margin-block-start: 0px;
 }
 #dateimg1{
     padding-left: 17px;
@@ -203,6 +219,7 @@ b{
     padding-right: 18px;
 }
 #dateimg2{
+    padding-top: 24px;
     padding-left: 18px;
     padding-bottom: 28.48px;
     padding-right: 17px;
@@ -214,25 +231,32 @@ b{
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
-    line-height: 17px;
+    height:60px;
 
     color: #BCBCBC;
 
     height:60px;
+    
+}
+#footer p{
     padding-left: 30px;
     padding-top:21px;
     padding-bottom:22px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
 }
 
 
 
 .content_container{
 
+    height:918px;
     display:grid;
     grid-template-areas:
     'g1 g1 g4'
     'g2 g3 g4';
-    gap: 20px;
+    row-gap: 24px;
+    column-gap: 20px;
     background-color: #282828;
 
     margin:0px;
@@ -245,6 +269,8 @@ b{
 }
 .g3{
     grid-area:g3;
+
+    
 }
 .g4{
     grid-area:g4;
