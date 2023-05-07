@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Rock+Salt&family=Teko&display=swap');
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height:100%;
+    margin:0;
+}
+
+
+main{
+    height:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+header{
+
+    padding-left: 50px;
+    padding-right: 12px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:23px;
+    background-color: rgba(80, 80, 80, 1);
+
+
+    Font-family: Roboto;
+    Font-style: Regular;
+    Font-size: 12px;
+    Line-height: 14px;
+    color: rgba(227, 227, 227, 1);
+
+
+}
+#feh{
+    width:120px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#sprocket{
+    background: url('images/sprites.png') no-repeat -433px -190px;
+	width: 13px;
+	height: 16px;
+
+}
+
+#containsquaretray{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggletray{
+    background: url('images/sprites.png') no-repeat -169px -214px;
+    transform: scale(2);
+	width: 12px;
+	height: 12px;
+
+    
+    
+	
+}
+#squares{
+    background: url('images/sprites.png') no-repeat -217px -191px;
+    transform: scale(2);
+	width: 11px;
+	height: 11px;
+}
+
+#trash{
+    background: url('images/sprites.png') no-repeat -458px -189px;
+    transform: scale(2);
+	width: 11px;
+	height: 13px;
+}
+
+
+section{
+    display:flex;
+    height:100%;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width:50px;
+    background-color: rgba(80, 80, 80, 1);
+
+  
+}
+#ttl{
+    color:#FFFFFF
+}
+footer{
+    display: flex;
+    height: 20px;
+    padding-top: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: rgba(2, 84, 160, 1);
+    border-top: 1px solid rgba(255,255,255,1);
+
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    color:#E3E3E3;
+
+    
+}
+
+#inner-tray{
+    display: flex;
+    flex-direction: column;
+    padding-top: 12px;
+}
+
+details summary{
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7B7575;
+    border-top: 1px solid #7B7575;
+
+
+}
+details{
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 8px;
+}
+details ul {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color:#E3E3E3;
+    padding-bottom: 4px;
+
+}
+li{
+    padding-bottom: 4px;
+}
+#things{
+    list-style-image: url(images/fire.png);
+}
+#files{
+    list-style-image: url(images/paper.png);
+}
+
+
+
+
+#editor{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+textarea{
+    width:100%;
+    height:100%;
+    border-width: 0;
+    resize:none;
+    outline:none;
+    background-color:black;
+    overflow-y:scroll;
+    color:white;
+    
+}
+p{
+    margin:0;
+}
+
+ #inner-tray{
+    width:200px;
+    background-color:#373737;
+}
+
+.tray{
+    
+    width:200px;
+    display:flex;
+    justify-content: flex-start;
+    overflow:hidden;
+    transition:all .5s;
+}
+
+
+#breadcrumbs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+    background-color: #161616;
+    align-items: center;
+
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    color:#E3E3E3
+
+    
+    
+    
+
+}
+
+
+
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    
+
+}
+nav a{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 10px;
+    width:200px;
+    height:25px;
+    background-color:#373737;
+    float:left;
+}
+nav a div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#plane{
+    background: url('images/sprites.png') no-repeat -170px -310px;
+	width: 11px;
+	height: 12px;
+
+}
+#X{
+    display: flex;
+    flex-direction: row-reverse;
+    background: url('images/sprites.png') no-repeat -314px -191px;
+    margin-left: 120px;
+	width: 10px;
+	height: 10px;
+}
+
+nav a:hover{
+
+}
+
+
+#bars{
+
+    
+    background: url('images/sprites.png') no-repeat -410px -190px;
+    width: 11px;
+    height: 12px;
+    
+}
+
+.closed{
+    width:0px;
+    transition:all .5s;
+}
