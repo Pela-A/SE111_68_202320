@@ -45,6 +45,12 @@ header{
 }
 
 #sprocket{
+    background: url('images/sprites.png') no-repeat -433px -1px;
+	width: 13px;
+	height: 16px;
+
+}
+#sprocket:hover{
     background: url('images/sprites.png') no-repeat -433px -190px;
 	width: 13px;
 	height: 16px;
@@ -58,8 +64,17 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
 .toggletray{
+    background: url('images/sprites.png') no-repeat -169px -25px;
+    transform: scale(2);
+	width: 12px;
+	height: 12px;
+
+    
+    
+	
+}
+.toggletray:hover{
     background: url('images/sprites.png') no-repeat -169px -214px;
     transform: scale(2);
 	width: 12px;
@@ -70,13 +85,24 @@ header{
 	
 }
 #squares{
+    background: url('images/sprites.png') no-repeat -217px -2px;
+    transform: scale(2);
+	width: 11px;
+	height: 11px;
+}
+#squares:hover{
     background: url('images/sprites.png') no-repeat -217px -191px;
     transform: scale(2);
 	width: 11px;
 	height: 11px;
 }
-
 #trash{
+    background: url('images/sprites.png') no-repeat -458px 0;
+    transform: scale(2);
+	width: 11px;
+	height: 13px;
+}
+#trash:hover{
     background: url('images/sprites.png') no-repeat -458px -189px;
     transform: scale(2);
 	width: 11px;
@@ -138,7 +164,7 @@ details summary{
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0em;
-    color: #FFFFFF;
+    color: #e3e3e3;
 
     padding-top: 10px;
     padding-bottom: 10px;
@@ -146,6 +172,9 @@ details summary{
     border-top: 1px solid #7B7575;
 
 
+}
+details summary:hover{
+    color: #ffffff
 }
 details{
     padding-left: 2px;
@@ -164,6 +193,11 @@ details ul {
 }
 li{
     padding-bottom: 4px;
+}
+li:hover{
+
+    color: #FFFFFF;
+    filter:brightness(2);
 }
 #things{
     list-style-image: url(images/fire.png);
@@ -218,6 +252,7 @@ p{
     height: 24px;
     background-color: #161616;
     align-items: center;
+    padding-left: 4px;
 
     font-family: Roboto;
     font-size: 12px;
@@ -246,6 +281,7 @@ nav{
 nav a{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     padding-left: 5px;
     padding-right: 10px;
@@ -253,40 +289,60 @@ nav a{
     height:25px;
     background-color:#373737;
     float:left;
+    color:#E3E3E3;
+    text-decoration: none;
 }
-nav a div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+nav a:hover{
+    color: #FFFFFF;
 }
 
-#plane{
+nav a:hover #plane{
     background: url('images/sprites.png') no-repeat -170px -310px;
 	width: 11px;
 	height: 12px;
+}
+nav a:hover #X{
+    background: url('images/sprites.png') no-repeat -314px -191px;
+	width: 10px;
+	height: 10px;
+}
+
+
+#plane{
+    background: url('images/sprites.png') no-repeat -170px -121px;
+	width: 11px;
+	height: 12px;
+    padding-right: 8px;
 
 }
 #X{
     display: flex;
     flex-direction: row-reverse;
-    background: url('images/sprites.png') no-repeat -314px -191px;
-    margin-left: 120px;
+    background: url('images/sprites.png') no-repeat -314px -2px;
+    
 	width: 10px;
 	height: 10px;
 }
-
-nav a:hover{
-
+#flxpln{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:58px;
 }
 
 
 #bars{
 
     
-    background: url('images/sprites.png') no-repeat -410px -190px;
+    background: url('images/sprites.png') no-repeat -410px -1px;
     width: 11px;
     height: 12px;
     
+}
+#bars:hover{
+    background: url('images/sprites.png') no-repeat -410px -190px;
+	width: 11px;
+	height: 12px;
 }
 
 .closed{

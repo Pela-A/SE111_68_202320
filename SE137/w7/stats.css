@@ -1,0 +1,100 @@
+html, body{
+    margin:0;
+    height:100vh;
+    font-size:16px;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+table{
+    width:80%;
+    border-collapse: collapse;
+}
+ td{
+    border-bottom:1px solid black;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+}
+tbody{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media only screen and (max-width:1920px){
+    body{
+        background-color: rgba(0, 255, 255, 0.24);
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    thead{
+        background-color: rgb(214, 250, 252);
+        font-size:1em;
+        color: red;
+    }
+    thead tr:first-child{
+        display: contents;
+        font-size:1em;
+    }
+    thead tr:last-child{
+        display: none;
+    }   
+    
+  
+    
+}
+@media only screen and (max-width:1000px){
+    body{
+        background-color: rgba(165, 42, 42, 0.226);
+    }
+    h1{
+        font-size: 1.5em;
+    }
+    thead{
+        background-color: #eeb8b8;
+        font-size:1em;
+        color: rgb(0, 255, 136);
+    }
+    thead tr:first-child{
+        display: none;
+    }
+    thead tr:last-child{
+        display: contents;
+        font-size:1em;
+    }   
+  
+    
+   
+
+}
+@media only screen and (max-width:500px){
+    body{
+        background-color: rgba(247, 115, 170, 0.363);
+    }
+    h1{
+        font-size: 2em;
+    }
+    thead{
+        background-color: #ccbbf5;
+        font-size:1.5em;
+        color: rgb(0, 119, 255);
+    }
+    thead tr:first-child{
+        display: none;
+    }
+    thead tr:last-child{
+        display: contents;
+        font-size:1.25em;
+    }   
+    
+   
+    .stat{
+        display:none;
+    }
+    tbody{
+        font-size: 1.1em;
+    }
+}
