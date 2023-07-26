@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+    <script>
+        //define person class
+        class Person
+        {
+            //constructor
+            constructor(fname=`john`, lname=`Doe`, age=30, height=`8'2"`)
+            {
+                this.name = {
+                    first: fname,
+                    last: lname
+                }
+                this.age=age
+                this.height = height;
+            }
+            setProps(obj)
+            {
+                //props represents properties of the sent object (only one property at a time)
+                for(let props in obj)
+                {
+                    //this represents the object which called the method
+                    //if property in sent object is not undefined 
+                    if(this[props]!== undefined)
+                    {
+                        //set property of object that calls method to property of sent object
+                        this[props] = obj[props]
+                    }
+                }
+                return this;
+            }
+        }
+
+        //declare new person class
+        var me = new Person()
+
+        //log in console, the resulting object
+
+
+        console.log(me.setProps({height:12}))
+
+        
+
+
+
+
+
+
+        
+        
+        var namo = ["Jay", "Marty", "Jordan", "Bill"]
+        console.log(namo)
+
+
+        //var message = ``
+        //for(let i=0; i<namo.length; i++)
+       // {
+            //message += `<p>`
+            //message += namo[i]
+            //message += `</p>`
+
+
+            
+       // }
+        //document.querySelector(`body`).innerHTML += message
+
+
+        var people = [
+            {
+            fName:`Bobby`,
+            lName:`brown`,
+            hair:`brown`,
+            height:6
+            },
+            {
+            fName:`whitney`,
+            lName:`houston`,
+            hair:`brown`,
+            height:6
+            }
+
+
+
+        ]
+
+        var body = document.querySelector(`body`)
+        var message = ``
+
+        //for(let i in people[0]){
+        //    console.log(people[0][i])
+        //}
+        
+
+
+        for(let i=0;i<people.length; i++){
+
+            for(let val in people[i]){
+            console.log(people[i][val])
+        }
+
+            message += `<p>${people[i].fName} ${people[i].lName}</p>`
+        }
+        body.innerHTML += message
+
+        console.table(people)
+
+
+
+
+    </script>
+</body>
+</html>
