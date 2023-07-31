@@ -2,6 +2,8 @@ var c = document.querySelector(`#pong`);
 var ctx = c.getContext(`2d`);
 var timer = setInterval(main,1000/60);
 
+var scoreboard = document.querySelectorAll(`#score div`);
+console.log(scoreboard)
 //friction
 var fy = .85
 
@@ -144,6 +146,10 @@ function main()
     pad[0].draw()
     pad[1].draw()
     ball.draw()
+
+    for(let i=0; i<scoreboard.length; i++){
+        scoreboard[i].innerText=player[i].score
+    }
     
 
 }

@@ -7,3 +7,7 @@ canvas{
 body{
     background-color: rgb(30,30,40);
 }
+#score{
+    color:white;
+    size:24px;
+}
