@@ -65,39 +65,37 @@ function main()
         pad[1].vy += pad[1].force
     }
 
+
+
     //multiply velocity by friction value to create terminal velocity feeling
     pad[0].vy *= fy
     pad[1].vy *= fy
 
+
+
     //move method called for all objects
-    pad[0].move();
-    pad[1].move();
+    
+    for(let i = 0;i<pad.length;i++){
+        pad[i].move()
+    }
     ball.move();
     
-    //if wall y position less than 0+height of wall/2
-    if(pad[0].y < 0+pad[0].h/2)
-    {
-        pad[0].y = 0+pad[0].h/2
+
+
+//pad collision with canvas
+    for(let i = 0;i<pad.length;i++){
+
+        //if wall y position less than 0+height of wall/2
+        if(pad[i].y < 0+pad[i].h/2)
+        {
+            pad[i].y = 0+pad[i].h/2
+        } 
+        if(pad[i].y > c.height-pad[i].h/2)
+        {
+            pad[i].y = c.height-pad[i].h/2
+        }
     }
 
-    //if player one y position greater than height of canvas minus half the height of player 1 (position of wall is center of wall)
-    //essentially if the y position is 750 or 50 the wall is not able to move
-    if(pad[0].y > c.height-pad[0].h/2)
-    {
-        pad[0].y = c.height-pad[0].h/2
-    }
-
-    //if wall y position less than 0+height of wall/2
-    if(pad[1].y < 0+pad[1].h/2)
-    {
-        pad[1].y = 0+pad[1].h/2
-    }
-    //if player one y position greater than height of canvas minus half the height of player 1 (position of wall is center of wall)
-    //essentially if the y position is 750 or 50 the wall is not able to move
-    if(pad[1].y > c.height-pad[1].h/2)
-    {
-        pad[1].y = c.height-pad[1].h/2
-    }
 
 
     //ball collision
@@ -130,7 +128,7 @@ function main()
 
 
     
-    //if ball hits ceiling for floor it bounces
+    //if ball hits ceiling or floor it bounces
 
     if(ball.y < 0){
         ball.y=0
@@ -143,10 +141,12 @@ function main()
     }
 
     //draws ball and players
-    pad[0].draw()
-    pad[1].draw()
+    for(let i = 0;i<pad.length;i++){
+        pad[i].draw()
+    }
     ball.draw()
 
+    //update scoreboard div innertext
     for(let i=0; i<scoreboard.length; i++){
         scoreboard[i].innerText=player[i].score
     }
