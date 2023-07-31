@@ -110,17 +110,21 @@ function main()
 
 
 
-    //reset ball to middle of canvas
+    //reset ball to middle of canvas (ball exit left)
     if(ball.x < 0)
     {
+        player[1].score ++
         ball.x = c.width/2
         ball.y = c.height/2
     }
+    //ball exit right
     if(ball.x > 800)
     {
+        player[0].score ++
         ball.x = c.width/2
         ball.y = c.height/2
     }
+    console.log(`${player[0].score} | ${player[1].score}`)
 
 
     
