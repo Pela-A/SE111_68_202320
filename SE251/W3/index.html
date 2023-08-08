@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .op{
+            display:grid;
+            grid-template-columns:auto auto auto;
+            width:400px;
+            justify-items:center;
+        }
+    </style>
+</head>
+<body>
+    <!--<input id="a" type="radio" name="veh" tableindex="0" value="car" checked="true"><label>car</label>
+    <input id="b" type="radio" name="veh" tableindex="0" value="truck" checked="false"><label>truck</label>
+
+    <input id="button" type="button" value="test"> 
+
+    <label for="num"></label>
+    <input type="range" id="num" value="100">
+
+    <input type="color" id="col"><label for="col">0</label> 
+
+    <div class="op">
+        <label>a</label>
+        <input type="text" class="key" maxlength="1">
+        <div class="output">a</div>
+     </div> -->
+
+
+     <div class="op">
+        <label>UP</label>
+        <input type="text" class="keys u" maxlength="1">
+        <div class="output">output</div>
+       <label>DOWN</label>
+       <input type="text" class="keys d" maxlength="1">
+        <div class="output">output</div>
+     </div>
+     
+    <script>
+
+        /*
+        document.querySelector(`label[for="num"]`).innerHTML=num.value
+        
+        num.addEventListener(`input`,show)
+        col.addEventListener(`change`,show)
+
+        function show(e)
+        {
+            var id = e.target.id
+
+            document.querySelector(`label[for="${id}"]`).innerHTML = e.target.value
+
+            
+        }
+
+        */
+
+
+//arrow functions are fucking dumb
+//dont need brackets if only one arguement.
+//if bracket must return
+//
+
+        //var add = e=> {return 20 + e}
+
+        //console.log(add(15,18))
+
+
+
+
+
+
+
+
+        /*button.addEventListener(`click`, showMe)
+
+        function showMe(evt)
+        {
+            //console.log(Number(a.value))
+            var rad = document.querySelectorAll(`input[name="veh"]`)
+            console.log(rad)
+        }
+
+        var x =23
+        String(x)
+        //typeof for data type
+        //a.addEventListener(`onclick`,function(){
+        //    alert("yo")
+        //})
+    
+    var keys ={
+    name:`bob`,
+    key: `q`
+    }
+
+    var d = document.querySelector("."+ Object.keys(keys)[1])
+    d.previousElementSibling.innerHTML= d.className.toUpperCase()
+    d.value= keys[Object.keys(keys)[1]]
+    d.nextElementSibling.innerHTML=keys[Object.keys(keys)[1]]
+
+    d.addEventListener(`keydown`, e=>{
+        console.log(e)
+        console.log(e.target.value)
+        console.log(e.key)
+        e.target.value = e.key
+        keys.key=e.target.value
+        d.nextElementSibling.innerHTML=keys.key
+        console.log(keys)
+    }
+    )
+
+/*console.log("."+Object.keys(keys)[1])
+console.log(d)
+console.log(Object.keys(keys)[1])
+console.log(typeof("."+Object.keys(keys)[1]))*/
+
+
+
+
+
+    var keys ={
+    u:`w`,
+    d: `s`
+    }
+
+    var keyInp = document.querySelectorAll(`.keys`)
+
+
+    for(let i=0; i<keyInp.length; i++)
+    {
+        keyInp[i].value = keys[keyInp[i].classList[1]];
+        
+        
+        keyInp[i].addEventListener(`keydown`,(e)=>{
+        e.target.value = e.key
+        console.log(keys[e.target.classList[1]])
+        keys[e.target.classList[1]] = e.target.value
+        e.target.nextElementSibling.innerHTML = keys[e.target.classList[1]]
+        })
+    }
+    </script>
+</body>
+
+
+</html>
