@@ -80,8 +80,26 @@ for(let i=0;i<upInp.length;i++){
 
         player[i].keys.u = e.key
         e.target.nextElementSibling.innerHTML=e.key
-        })
+    })
+    downInp[i].addEventListener(`keydown`,(e)=>{
+        e.target.value = e.key
+    
+        player[i].keys.d = e.key
+        e.target.nextElementSibling.innerHTML=e.key
+    })
+    strInp[i].addEventListener(`keydown`,(e)=>{
+        e.target.value = e.key
+    
+        player[i].keys.s = e.key
+        e.target.nextElementSibling.innerHTML=e.key
+    })
     upInp[i].addEventListener(`focus`,(e)=>{
+        currentState = `pause`
+    })
+    downInp[i].addEventListener(`focus`,(e)=>{
+        currentState = `pause`
+    })
+    strInp[i].addEventListener(`focus`,(e)=>{
         currentState = `pause`
     })
 }
