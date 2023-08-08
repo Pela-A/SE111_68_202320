@@ -47,6 +47,13 @@ for(let i=0; i<fills.length;i++){
         
         strokes[i].nextElementSibling.innerHTML = pad[i].stroke
     })
+
+    fills[i].addEventListener(`focus`,(e)=>{
+        currentState = `pause`
+    })
+    strokes[i].addEventListener(`focus`,(e)=>{
+        currentState = `pause`
+    })
     
 }
 
@@ -100,6 +107,24 @@ for(let i=0;i<upInp.length;i++){
         currentState = `pause`
     })
     strInp[i].addEventListener(`focus`,(e)=>{
+        currentState = `pause`
+    })
+}
+
+//select friction input
+
+var friction = document.querySelectorAll(`.fy`)
+console.log(friction)
+for(let i=0;i<friction.length;i++){
+    console.log(friction[i])
+    friction[i].value = player[i].fy
+    friction[i].nextElementSibling.innerHTML = player[i].fy
+
+    friction[i].addEventListener(`input`,(e)=>{
+        player[i].fy= e.target.value
+        e.target.nextElementSibling.innerHTML=e.target.value
+    })
+    friction[i].addEventListener(`focus`,(e)=>{
         currentState = `pause`
     })
 }
