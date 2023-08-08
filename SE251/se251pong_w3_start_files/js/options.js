@@ -25,6 +25,52 @@ opt.addEventListener(`click`,e=>{
 
 -----------*/
 
+var fills = document.querySelectorAll(`.fill`)
+var strokes = document.querySelectorAll(`.stroke`)
+
+for(let i=0; i<fills.length;i++){
+    
+    fills[i].value = pad[i].fill
+    fills[i].nextElementSibling.innerHTML = pad[i].fill
+    strokes[i].value = pad[i].stroke
+    strokes[i].nextElementSibling.innerHTML = pad[i].stroke
+
+    fills[i].addEventListener('input',(e)=>{
+        
+        
+        pad[i].fill = e.target.value
+        fills[i].nextElementSibling.innerHTML = pad[i].fill
+        
+    })
+    strokes[i].addEventListener(`input`,(e)=>{
+        pad[i].stroke = e.target.value
+        
+        strokes[i].nextElementSibling.innerHTML = pad[i].stroke
+    })
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*---------
     Program the six key inputs to do the following:
     . Display the correct key names for each player   
