@@ -55,22 +55,6 @@ for(let i=0; i<fills.length;i++){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*---------
     Program the six key inputs to do the following:
     . Display the correct key names for each player   
@@ -79,3 +63,25 @@ for(let i=0; i<fills.length;i++){
         .Change the player's key to the value of the input
         .Show the player's key in the output div 
 -----------*/
+
+var upInp = document.querySelectorAll(`.u`)
+var downInp = document.querySelectorAll(`.d`)
+var strInp = document.querySelectorAll(`.s`)
+
+for(let i=0;i<upInp.length;i++){
+    console.log(player[i])
+    upInp[i].value=player[i].keys.u
+    downInp[i].value=player[i].keys.d
+    strInp[i].value=player[i].keys.s
+
+
+    upInp[i].addEventListener(`keydown`,(e)=>{
+        e.target.value = e.key
+
+        player[i].keys.u = e.key
+        e.target.nextElementSibling.innerHTML=e.key
+        })
+    upInp[i].addEventListener(`focus`,(e)=>{
+        currentState = `pause`
+    })
+}
