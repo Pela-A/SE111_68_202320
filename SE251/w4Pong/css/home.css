@@ -52,7 +52,7 @@
     mix-blend-mode: screen;
     position:absolute;
     z-index: 3;
-    background: url('../images/load.gif') no-repeat -51px -43px;
+    
 	width: 105px;
 	height: 118px;
     left:0px;
