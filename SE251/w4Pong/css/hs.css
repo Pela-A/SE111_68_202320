@@ -2,6 +2,7 @@
 
 .high-scores{
     width:760px;
+    text-align: center;
 }
 .row{
     display:flex;

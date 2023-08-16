@@ -39,6 +39,40 @@
     <script src="js/User.js"></script>
     <script>
 
+
+        let params = (new URL(document.location)).searchParams;
+        let name = params.get("load");
+
+        alert(name);
+
+        var urlParams = new URLSearchParams(window.location.search)
+        console.log(urlParams.get(`load`))
+
+        var p1;
+        if(urlParams.get(`load`)===`true`){
+            p1 = new User().setProps(JSON.parse(localStorage.getItem(`p1`)))
+            console.log(p1)
+        }
+        else{
+            p1 = new User();
+        }
+
+        const fields = document.querySelectorAll(`input`)
+
+        for(let i=0;i<fields.length; i++){
+            fields[i].value = (p1[fields[i].classList[0]]===undefined)?
+                p1.Keys[fields[i].classList[0]]: 
+                p1[fields[i].classList[0]];
+
+            fields[i].nextElementSibling.innerHTML = (p1[fields[i].classList[0]]===undefined)?
+                p1.Keys[fields[i].classList[0]]:
+                p1[fields[i].classList[0]];
+
+
+            var keysProp = p1.keys[fields[i].classList[0]]
+            var normalProp = p1[fields[i].classList[0]]
+            fields[i].value = (normalProp===undefined)
+        }
     </script>
 </body>
 </html>

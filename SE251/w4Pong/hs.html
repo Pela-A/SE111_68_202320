@@ -35,13 +35,21 @@
         //
         var menus = document.querySelector(`#menus`);
 
+        var message = "<h2>Name | Score </h2>"
+
+        for(let i = 0; i<highScoreList.length;i++){
+
+            message += "<div id=high-scores>"
+            console.log(highScoreList[i])
+            message += highScoreList[i].name
+            message += ": " + highScoreList[i].score
+
+            message += "</div>"
+        }
         
-       
+        console.log(message)
 
-     
-
-
-
+        menus.innerHTML += message
       
         
 
