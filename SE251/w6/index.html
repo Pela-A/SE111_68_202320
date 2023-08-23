@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password">
+    <input type="password">
+    <button>Check</button>
+
+
+    <script>
+
+
+        document.querySelector('button').addEventListener(`click`,(e)=>{
+            var input = document.querySelectorAll(`input`)
+            if(input[0].value === input[1].value){
+                console.log(`They match`)
+            }
+
+            if(input[0].value.length < 8){
+                console.log(`password is too short`)
+            }
+            var pattern = /[[a-z][A-Z]]\w{8}/
+            if(pattern.test(input[0].value)){
+                console.log(true)
+            }
+            else{
+                console.log(false)
+            }
+        })
+
+    </script>
+</body>
+</html>

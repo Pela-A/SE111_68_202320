@@ -7,26 +7,39 @@
     <title>Document</title>
 </head>
 <body>
-    <input type = "color">
+    <input type = "color" class="color">
+    <input type = "number" class="strength">
     <button id="submit">Submit</button>
     <button id="save">Save</button>
 
     <script>
-        var buttonSubmit = document.querySelector(`#submit`)
-        var buttonSave = document.querySelector(`#save`)
-        var input = document.querySelector(`button`)
+        var button = document.querySelector(`#submit`)
+        var saveButton = document.querySelector(`#save`)
+        var input = document.querySelectorAll(`input`)
 
-        buttonSubmit.addEventListener(`click`, (e)=>{
+
+
+        var obj = {color:`pink`, strength:1}
+
+        button.addEventListener(`click`, (e)=>{
             console.log(input.value)
-            window.location = `page2.html?color=${input.value.replace(`#`,`%23`)}`
+            window.location = `page2.html?color=${input[0].value.replace(`#`,`%23`)}`
             
 
         })
 
-        buttonSave.addEventListener(`click`, (e)=>{
+        saveButton.addEventListener(`click`, (e)=>{
             
-            var color = input.value
-            localStorage.set(`color`,color)
+
+            for(let i=0;i<input.length;i++){
+                obj[input[i].classList[0]] = input[i].value;
+
+
+
+            }
+            
+            localStorage.setItem(`color`,JSON.stringify(obj));
+            console.log(localStorage);
 
         })
 

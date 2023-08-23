@@ -61,11 +61,11 @@
 
         for(let i=0;i<fields.length; i++){
             fields[i].value = (p1[fields[i].classList[0]]===undefined)?
-                p1.Keys[fields[i].classList[0]]: 
+                p1.keys[fields[i].classList[0]]: 
                 p1[fields[i].classList[0]];
 
             fields[i].nextElementSibling.innerHTML = (p1[fields[i].classList[0]]===undefined)?
-                p1.Keys[fields[i].classList[0]]:
+                p1.keys[fields[i].classList[0]]:
                 p1[fields[i].classList[0]];
 
 

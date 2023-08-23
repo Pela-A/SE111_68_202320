@@ -13,10 +13,22 @@
 
 
     <script>
-        var urlParams = new URLSearchParams(location.search)
+       
+       
+       /*
+       var urlParams = new URLSearchParams(location.search)
         var color = urlParam.get(`color`)
         document.querySelector(`body`).style.backgroundColor=color
         document.querySelector(`p`).innerHTML=color
+        */
+
+
+        var obj = JSON.parse(localStorage.getItem(`color`))
+        console.log(obj)
+        if(obj != null){
+            document.querySelector(`body`).style.backgroundColor = obj.color
+        }
+        
     </script>
 </body>
 </html>
