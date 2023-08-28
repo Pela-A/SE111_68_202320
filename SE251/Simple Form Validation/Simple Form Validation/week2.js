@@ -1,17 +1,16 @@
 // JavaScript Document
 
 var inputs = document.querySelectorAll(`input`)
-var firstName = document.querySelector(`#first-name`)
-var lastName = document.querySelector(`#last-name`)
-var email = document.querySelector(`#email`)
-var confirm = document.querySelector(`#confirm`)
-var phoneNum = document.querySelector(`#phone`)
 
+console.log(inputs)
+var labels = ["first name", "last name","email" ,"confirm email","phone number"]
+
+console.log(labels.innerHTML)
 
 
 
 var submitBtn = document.querySelector(`#submitBtn`)
-console.log(submitBtn)
+
 var info = document.querySelector(`#info`)
 
 
@@ -23,19 +22,29 @@ var info = document.querySelector(`#info`)
 submitBtn.addEventListener(`click`, (e)=>{
     
     
-    console.log(inputs[0].innerHTML)
-    if(inputs[0].value !== ""){
-        console.log("yo")
+    
+    for(let i=0; i < inputs.length - 1; i ++){
+        if(inputs[i].value !== ""){
+            inputs[i].parentElement.classList.remove(`error`)
+            inputs[i].nextElementSibling.innerHTML = ""
+            console.log("yo")
+        }
+        else{
+            
+            inputs[i].parentElement.classList.add(`error`)
+
+            
+            inputs[i].nextElementSibling.innerHTML = `* Please enter a ${labels[i]}`
+            
+
+
     }
-    else{
-        
-        inputs[0].parentElement.classList.add("error")
-        inputs[0].nextElementSibling.innerHTML = "Please enter a first name!"
-        inputs[0].nextElementSibling.classList.add("error")
+    
+    
     }
     
     
-    
+})
     /*
     var person = {
         fname: firstName.value,
@@ -56,4 +65,3 @@ submitBtn.addEventListener(`click`, (e)=>{
     info.innerHTML = message
     info.parentElement.style.display = "block"*/
 
-})
