@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button">Get Data</button>
+    <p></p>
+    
+    <script>
+
+        let p = document.querySelector(`p`)
+
+
+        /*let promise = new Promise((resolve,reject)=>{
+            //resolve('hi')
+            reject("Uh Oh")
+        })
+
+
+        promise.then((data)=>alert(data)).catch((error)=>alert(error)).finally(()=>alert(`Bye`))*/p
+        
+        async function logMovies() {
+
+            var icon = document.createElement(`img`)
+            icon.setAttribute(`src`, `images/giphy.gif`)
+            p.appendChild(icon)
+
+            const response = await fetch("https://swapi.dev/api/people/1/");
+            const movies = await response.json();
+
+            var message
+
+            for(let i in movies){
+                message += `<p> ${movies[i]} </p>`
+            }
+
+            p.removeChild(icon)
+            p.innerHTML += message
+        }
+
+
+        document.querySelector(`button`).addEventListener(`click`,logMovies)
+    </script>
+    
+</body>
+</html>

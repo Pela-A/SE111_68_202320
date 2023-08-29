@@ -30,18 +30,17 @@ submitBtn.addEventListener(`click`, (e)=>{
             console.log("yo")
         }
         else{
-            
             inputs[i].parentElement.classList.add(`error`)
-
-            
+ 
             inputs[i].nextElementSibling.innerHTML = `* Please enter a ${labels[i]}`
-            
-
-
-    }
+        }   
     
     
     }
+    if(inputs[2].value !== inputs[3].value){
+        inputs[2].nextElementSibling.innerHTML += "Emails do not match!"
+    }
+
     
     
 })
