@@ -11,7 +11,12 @@
 	border: 1px solid black;
 	padding: 10px;
 }
-
+#feedback{
+	width:400px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
 #confirmation
 {
 	position: relative;
