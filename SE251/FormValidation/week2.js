@@ -22,7 +22,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         inputs[0].nextElementSibling.innerHTML = `*`
     }
     else{
-        message+="First Name contains special characters or numbers"
+        message+="<p>First Name contains special characters or numbers</p>"
         inputs[0].parentElement.classList.add(`error`)
         inputs[0].nextElementSibling.innerHTML = `*`
     }
@@ -39,7 +39,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         inputs[1].nextElementSibling.innerHTML = `*`
     }
     else{
-        message+="Last Name contains special characters" 
+        message+="<p>Last Name contains special characters</p>" 
         inputs[1].parentElement.classList.add(`error`)
         inputs[1].nextElementSibling.innerHTML = `*`
     }
@@ -58,7 +58,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         inputs[2].nextElementSibling.innerHTML = `*`
     }
     else{
-        message+="Please enter a valid email" 
+        message+="<p>Please enter a valid email</p>" 
         inputs[2].parentElement.classList.add(`error`)
         inputs[2].nextElementSibling.innerHTML = `*`
     } 
@@ -81,7 +81,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         message += `<p>Email and confirm emial must match!</p>`
     }
     else{
-        message+="Please enter a valid confirm email" 
+        message+="<p>Please enter a valid confirm email</p>" 
         inputs[3].parentElement.classList.add(`error`)
         inputs[3].nextElementSibling.innerHTML = `*`
     } 
