@@ -28,7 +28,7 @@ submitBtn.addEventListener(`click`, (e)=>{
     }
 
     //check last name*****************************
-    if(inputs[1].value !== "" && pattern1.test(inputs[1].value) )
+    if(inputs[1].value !== "" && !pattern1.test(inputs[1].value) )
     {
         inputs[1].parentElement.classList.remove(`error`)
         inputs[1].nextElementSibling.innerHTML = ""
@@ -39,7 +39,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         inputs[1].nextElementSibling.innerHTML = `*`
     }
     else{
-        message+="<p>Last Name contains special characters</p>" 
+        message+="<p>Last Name contains special characters or numbers</p>" 
         inputs[1].parentElement.classList.add(`error`)
         inputs[1].nextElementSibling.innerHTML = `*`
     }
@@ -63,7 +63,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         inputs[2].nextElementSibling.innerHTML = `*`
     } 
     //check confirm email
-    if(pattern2.test(inputs[3].value))
+    if(pattern2.test(inputs[3].value && inputs[2].value == inputs[3].value ))
     {
         inputs[3].parentElement.classList.remove(`error`)
         inputs[3].nextElementSibling.innerHTML = ""
@@ -78,7 +78,7 @@ submitBtn.addEventListener(`click`, (e)=>{
         inputs[3].parentElement.classList.add(`error`)
         inputs[2].nextElementSibling.innerHTML = `*`
         inputs[3].nextElementSibling.innerHTML = `*`
-        message += `<p>Email and confirm emial must match!</p>`
+        message += `<p>Email and confirm email must match!</p>`
     }
     else{
         message+="<p>Please enter a valid confirm email</p>" 
